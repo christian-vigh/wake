@@ -1,5 +1,5 @@
-builtins-logical.o: wake/lib/builtins/builtins-logical.c \
- wake/include/wake.h makeint.h config.h /usr/include/alloca.h \
+builtins-logical.o: wake.ext/lib/builtins/builtins-logical.c \
+ wake.ext/include/wake.h makeint.h config.h /usr/include/alloca.h \
  /usr/include/_ansi.h /usr/include/newlib.h /usr/include/sys/config.h \
  /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
  /usr/include/cygwin/config.h /usr/include/sys/reent.h \
@@ -33,9 +33,9 @@ builtins-logical.o: wake/lib/builtins/builtins-logical.c \
  /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stdint.h \
  /usr/include/stdint.h /usr/include/locale.h gettext.h \
  /usr/include/libintl.h /usr/include/sys/resource.h filedef.h hash.h \
- function.h variable.h wake/include/wake.h
+ function.h variable.h wake.ext/include/wake.h
 
-wake/include/wake.h:
+wake.ext/include/wake.h:
 
 makeint.h:
 
@@ -185,4 +185,4 @@ function.h:
 
 variable.h:
 
-wake/include/wake.h:
+wake.ext/include/wake.h:

@@ -1,4 +1,4 @@
-eval.o: wake/eval/eval.c /usr/include/stdio.h /usr/include/_ansi.h \
+eval.o: wake.ext/eval/eval.c /usr/include/stdio.h /usr/include/_ansi.h \
  /usr/include/newlib.h /usr/include/sys/config.h \
  /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
  /usr/include/cygwin/config.h /usr/include/sys/cdefs.h \
@@ -21,11 +21,11 @@ eval.o: wake/eval/eval.c /usr/include/stdio.h /usr/include/_ansi.h \
  /usr/include/machine/time.h /usr/include/sys/timespec.h \
  /usr/include/cygwin/time.h /usr/include/signal.h \
  /usr/include/sys/signal.h /usr/include/cygwin/signal.h \
- /usr/include/sys/ucontext.h wake/eval/eval.h \
+ /usr/include/sys/ucontext.h wake.ext/eval/eval.h \
  /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/features.h /usr/include/strings.h \
- wake/eval/evalfuncs.h
+ wake.ext/eval/evalfuncs.h
 
 /usr/include/stdio.h:
 
@@ -121,7 +121,7 @@ eval.o: wake/eval/eval.c /usr/include/stdio.h /usr/include/_ansi.h \
 
 /usr/include/sys/ucontext.h:
 
-wake/eval/eval.h:
+wake.ext/eval/eval.h:
 
 /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/limits.h:
 
@@ -133,4 +133,4 @@ wake/eval/eval.h:
 
 /usr/include/strings.h:
 
-wake/eval/evalfuncs.h:
+wake.ext/eval/evalfuncs.h:

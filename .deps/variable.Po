@@ -34,8 +34,8 @@ variable.o: variable.c makeint.h config.h /usr/include/alloca.h \
  /usr/include/libintl.h /usr/include/sys/resource.h /usr/include/assert.h \
  filedef.h hash.h dep.h job.h output.h /usr/include/fcntl.h \
  /usr/include/sys/fcntl.h /usr/include/sys/_default_fcntl.h commands.h \
- variable.h rule.h wake/include/wake.h makeint.h gnumake.h filedef.h \
- function.h variable.h wake/include/wake.h
+ variable.h rule.h wake.ext/include/wake.h makeint.h gnumake.h filedef.h \
+ function.h variable.h wake.ext/include/wake.h
 
 makeint.h:
 
@@ -201,7 +201,7 @@ variable.h:
 
 rule.h:
 
-wake/include/wake.h:
+wake.ext/include/wake.h:
 
 makeint.h:
 
@@ -213,4 +213,4 @@ function.h:
 
 variable.h:
 
-wake/include/wake.h:
+wake.ext/include/wake.h:

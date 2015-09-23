@@ -99,6 +99,9 @@
     <ClCompile Include="rule.c" />
     <ClCompile Include="signame.c" />
     <ClCompile Include="strcache.c" />
+    <ClCompile Include="wake\eval\eval.c" />
+    <ClCompile Include="wake\eval\evalfuncs.c" />
+    <ClCompile Include="wake\eval\main.c" />
     <ClCompile Include="wake\lib\builtins\builtins-date.c" />
     <ClCompile Include="wake\lib\builtins\builtins-file.c" />
     <ClCompile Include="wake\lib\builtins\builtins-internals.c" />
@@ -109,7 +112,7 @@
     <ClCompile Include="wake\lib\builtins\builtins-string.c" />
     <ClCompile Include="wake\lib\conditionals.c" />
     <ClCompile Include="wake\lib\define.c" />
-    <ClCompile Include="wake\lib\eval.c" />
+    <ClCompile Include="wake\lib\parser.c" />
     <ClCompile Include="wake\lib\maker.c" />
     <ClCompile Include="wake\lib\reader.c" />
     <ClCompile Include="wake\lib\record.c" />
@@ -149,6 +152,7 @@
     <ClInclude Include="makeint.h" />
     <ClInclude Include="output.h" />
     <ClInclude Include="rule.h" />
+    <ClInclude Include="wake\eval\eval.h" />
     <ClInclude Include="wake\include\builtins.h" />
     <ClInclude Include="wake\include\counter.h" />
     <ClInclude Include="wake\include\parse.h" />
@@ -210,6 +214,8 @@
     <None Include="SMakefile" />
     <None Include="stamp-h1" />
     <None Include="subproc.bat" />
+    <None Include="wake\eval\.gitignore" />
+    <None Include="wake\eval\README.md" />
     <None Include="wake\tests\Makefile" />
     <None Include="wake\tests\Makefile.test" />
     <None Include="wake\wake.files" />

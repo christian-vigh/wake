@@ -247,6 +247,8 @@ Examples :
 
 	VAR3 	:=  $(<tempfile>,prefix.,.txt)
 	# VAR3 expands to something like : /tmp/prefix.22e0f0.1.txt
+
+Note : on Unix platform, *prefix* is limited to 5 characters.
 	 
 ### $(< filecontents> *file*) ###
 

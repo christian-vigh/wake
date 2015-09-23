@@ -4,4 +4,7 @@
 *.exe*
 *.suo 
 ipch/
-wake/tests/log.txt
+wake.ext/tests/log.txt
+log.txt
+*.sdf
+*.opensdf

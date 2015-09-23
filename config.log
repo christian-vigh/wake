@@ -601,13 +601,13 @@ configure: failed program was:
 configure:6946: result: no
 configure:6995: checking for GNU gettext in libc
 configure:7015: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccXDIbop.o: In function `main':
+/cygdrive/t/Temp/ccVZI23F.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:33: undefined reference to `libintl_bindtextdomain'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:33:(.text.startup+0x14): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `libintl_bindtextdomain'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:34: undefined reference to `libintl_gettext'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:34:(.text.startup+0x20): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `libintl_gettext'
-/cygdrive/t/Temp/ccXDIbop.o:conftest.c:(.rdata$.refptr._nl_domain_bindings[.refptr._nl_domain_bindings]+0x0): undefined reference to `_nl_domain_bindings'
-/cygdrive/t/Temp/ccXDIbop.o:conftest.c:(.rdata$.refptr._nl_msg_cat_cntr[.refptr._nl_msg_cat_cntr]+0x0): undefined reference to `_nl_msg_cat_cntr'
+/cygdrive/t/Temp/ccVZI23F.o:conftest.c:(.rdata$.refptr._nl_domain_bindings[.refptr._nl_domain_bindings]+0x0): undefined reference to `_nl_domain_bindings'
+/cygdrive/t/Temp/ccVZI23F.o:conftest.c:(.rdata$.refptr._nl_msg_cat_cntr[.refptr._nl_msg_cat_cntr]+0x0): undefined reference to `_nl_msg_cat_cntr'
 collect2: error: ld returned 1 exit status
 configure:7015: $? = 1
 configure: failed program was:
@@ -651,7 +651,7 @@ configure: failed program was:
 configure:7024: result: no
 configure:7058: checking for iconv
 configure:7080: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccPmbSr4.o: In function `main':
+/cygdrive/t/Temp/ccuqquOS.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:31: undefined reference to `libiconv_open'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:31:(.text.startup+0x15): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `libiconv_open'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:32: undefined reference to `libiconv'
@@ -1158,7 +1158,7 @@ configure:8942: $? = 0
 configure:8942: result: yes
 configure:8942: checking for sigsetmask
 configure:8942: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccZZYaGu.o: In function `main':
+/cygdrive/t/Temp/ccd871ti.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:94: undefined reference to `sigsetmask'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:94:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `sigsetmask'
 collect2: error: ld returned 1 exit status
@@ -1454,7 +1454,7 @@ configure:8983: $? = 0
 configure:8983: result: yes
 configure:8983: checking for strcmpi
 configure:8983: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccAkvuuI.o: In function `main':
+/cygdrive/t/Temp/ccbVlbT1.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115: undefined reference to `strcmpi'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `strcmpi'
 collect2: error: ld returned 1 exit status
@@ -1581,7 +1581,7 @@ configure: failed program was:
 configure:8983: result: no
 configure:8983: checking for strncmpi
 configure:8983: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/cc3Y6UCN.o: In function `main':
+/cygdrive/t/Temp/cc9V7CaT.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115: undefined reference to `strncmpi'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `strncmpi'
 collect2: error: ld returned 1 exit status
@@ -1708,7 +1708,7 @@ configure: failed program was:
 configure:8983: result: no
 configure:8983: checking for stricmp
 configure:8983: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccHTFmxO.o: In function `main':
+/cygdrive/t/Temp/ccKRW6iZ.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115: undefined reference to `stricmp'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `stricmp'
 collect2: error: ld returned 1 exit status
@@ -1835,7 +1835,7 @@ configure: failed program was:
 configure:8983: result: no
 configure:8983: checking for strnicmp
 configure:8983: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccaHJqQE.o: In function `main':
+/cygdrive/t/Temp/ccrYP7wk.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115: undefined reference to `strnicmp'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:115:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `strnicmp'
 collect2: error: ld returned 1 exit status
@@ -2141,7 +2141,7 @@ configure:9494: $? = 0
 configure:9532: result: yes
 configure:9644: checking for getloadavg
 configure:9644: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccL43jDc.o: In function `main':
+/cygdrive/t/Temp/ccSzeFle.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:119: undefined reference to `getloadavg'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:119:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `getloadavg'
 collect2: error: ld returned 1 exit status
@@ -2272,7 +2272,7 @@ configure: failed program was:
 configure:9644: result: no
 configure:9655: checking for pstat_getdynamic
 configure:9655: gcc -o conftest.exe -g -O2   conftest.c  >&5
-/cygdrive/t/Temp/ccy7oiGM.o: In function `main':
+/cygdrive/t/Temp/ccJ7ZMiC.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:119: undefined reference to `pstat_getdynamic'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:119:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `pstat_getdynamic'
 collect2: error: ld returned 1 exit status
@@ -2619,7 +2619,7 @@ configure: failed program was:
 configure:9794: result: no
 configure:9801: checking for getloadavg in -lutil
 configure:9826: gcc -o conftest.exe -g -O2   conftest.c -lutil  -lelf  >&5
-/cygdrive/t/Temp/ccllNHH9.o: In function `main':
+/cygdrive/t/Temp/ccYXElB1.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:96: undefined reference to `getloadavg'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:96:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `getloadavg'
 collect2: error: ld returned 1 exit status
@@ -2833,7 +2833,7 @@ configure: failed program was:
 configure:9882: result: no
 configure:9896: checking for getloadavg
 configure:9896: gcc -o conftest.exe -g -O2   conftest.c -lelf  >&5
-/cygdrive/t/Temp/ccYSEj3M.o: In function `main':
+/cygdrive/t/Temp/ccXI6X6x.o: In function `main':
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:119: undefined reference to `getloadavg'
 /cygdrive/e/Unix/make/wake-4.1/conftest.c:119:(.text.startup+0xa): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `getloadavg'
 collect2: error: ld returned 1 exit status
@@ -5085,3 +5085,21 @@ MAINT_MAKEFILE='/dev/null'
 #define PATH_SEPARATOR_CHAR ':'
 
 configure: exit 0
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by GNU make config.status 4.1, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status Makefile depfiles
+
+on AGAGAX
+
+config.status:1029: creating Makefile
+config.status:1263: executing depfiles commands
