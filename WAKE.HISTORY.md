@@ -1,3 +1,6 @@
+# WAKE 1.1.0 (GNU Make 4.1) #
+- Added the $(=) function, which allows for specifying any kind of mathematical infix expression
+
 # WAKE 1.0.0 (GNU Make 4.1) #
 Initial release.
  

@@ -1031,7 +1031,7 @@ static function_table_entry		wake_function_table [] =
 	    ),
 	FT_ENTRY
 	   (
-		"<=>",
+		"=",
 		1, 1,
 		1,
 		wake_builtin_math_eval,

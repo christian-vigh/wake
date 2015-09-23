@@ -63,6 +63,7 @@ test		:  				\
 			math.not		\
 			math.shl		\
 			math.shr		\
+			math.eval		\
 			date			\
 			guid			\
 			counter			\
@@ -480,7 +481,7 @@ math.xor		:
 math.not		:
 	@echo "(<~> )                                   : $(<~> )"
 	@echo "(<~> 0)                                  : $(<~> 0)"
-	@echo "(<~> 1)                                  : $(~> 1)"
+	@echo "(<~> 1)                                  : $(<~> 1)"
 	@echo "(<~> 0x1234)                             : $(<~> 0x1234)"
 
 # <<
@@ -493,6 +494,10 @@ math.shl		:
 math.shr		:
 	@echo "(>> 0x0F,)				: $(>> 0x0F,)"
 	@echo "(>> 0xF0, 4)				: $(>> 0xF0, 4)"
+
+# (=)
+math.eval		:
+	@echo "= 2 + 3 * 4!				: $(= 2 + 3 * 4!)"
 
 # Date functions
 date	:

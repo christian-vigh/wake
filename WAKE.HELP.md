@@ -490,6 +490,15 @@ Functions whose names are ending with **/i** perform a case-insensitive comparis
 
 The math functions allow to perform basic mathematical operations.
 
+### $(= expression) ###
+
+Evaluates the specified infix expression. This feature uses my expression evaluator package ([https://github.com/christian-vigh/eval](https://github.com/christian-vigh/eval "Expression evaluator package")).
+
+You will have a comprehensive documentation on expression syntax [here](https://github.com/christian-vigh/eval/blob/master/README.md "View the expression syntax help file").
+
+Of course, this feature make all the other math functions implemented in *wake* kind of useless 
+
+
 ### $(<+> *value1*, *value2* [,.., *valuen*]) ###
 
 Computes the addition of two or more values.
