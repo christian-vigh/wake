@@ -1,0 +1,546 @@
+guile.o: guile.c makeint.h config.h /usr/include/alloca.h \
+ /usr/include/_ansi.h /usr/include/newlib.h /usr/include/sys/config.h \
+ /usr/include/machine/ieeefp.h /usr/include/sys/features.h \
+ /usr/include/cygwin/config.h /usr/include/sys/reent.h \
+ /usr/include/_ansi.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stddef.h \
+ /usr/include/sys/_types.h /usr/include/machine/_types.h \
+ /usr/include/machine/_default_types.h /usr/include/sys/lock.h gnumake.h \
+ /usr/include/sys/types.h /usr/include/sys/cdefs.h \
+ /usr/include/sys/_stdint.h /usr/include/machine/types.h \
+ /usr/include/cygwin/types.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/byteswap.h \
+ /usr/include/bits/wordsize.h /usr/include/sys/_timespec.h \
+ /usr/include/sys/sysmacros.h /usr/include/sys/stat.h /usr/include/time.h \
+ /usr/include/machine/time.h /usr/include/sys/timespec.h \
+ /usr/include/cygwin/time.h /usr/include/signal.h \
+ /usr/include/sys/signal.h /usr/include/cygwin/signal.h \
+ /usr/include/sys/ucontext.h /usr/include/cygwin/stat.h \
+ /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stdarg.h \
+ /usr/include/sys/stdio.h /usr/include/ctype.h /usr/include/sys/timeb.h \
+ /usr/include/sys/time.h /usr/include/sys/_timeval.h \
+ /usr/include/sys/select.h /usr/include/errno.h /usr/include/sys/errno.h \
+ /usr/include/unistd.h /usr/include/sys/unistd.h getopt.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/features.h /usr/include/sys/param.h \
+ /usr/include/stdlib.h /usr/include/machine/stdlib.h \
+ /usr/include/cygwin/stdlib.h /usr/include/cygwin/wait.h \
+ /usr/include/string.h /usr/include/sys/string.h /usr/include/inttypes.h \
+ /usr/include/sys/_intsup.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stdint.h \
+ /usr/include/stdint.h /usr/include/locale.h gettext.h \
+ /usr/include/libintl.h /usr/include/sys/resource.h debug.h filedef.h \
+ hash.h dep.h variable.h /usr/include/guile/1.8/libguile.h \
+ /usr/include/gmp.h /usr/include/guile/1.8/libguile/__scm.h \
+ /usr/include/guile/1.8/libguile/scmconfig.h \
+ /usr/include/guile/1.8/libguile/tags.h \
+ /usr/include/guile/1.8/libguile/__scm.h /usr/include/setjmp.h \
+ /usr/include/machine/setjmp.h /usr/include/guile/1.8/libguile/alist.h \
+ /usr/include/guile/1.8/libguile/arbiters.h \
+ /usr/include/guile/1.8/libguile/async.h \
+ /usr/include/guile/1.8/libguile/root.h \
+ /usr/include/guile/1.8/libguile/debug.h \
+ /usr/include/guile/1.8/libguile/options.h \
+ /usr/include/guile/1.8/libguile/throw.h \
+ /usr/include/guile/1.8/libguile/threads.h \
+ /usr/include/guile/1.8/libguile/procs.h \
+ /usr/include/guile/1.8/libguile/iselect.h \
+ /usr/include/guile/1.8/libguile/dynwind.h \
+ /usr/include/guile/1.8/libguile/continuations.h \
+ /usr/include/guile/1.8/libguile/pthread-threads.h /usr/include/pthread.h \
+ /usr/include/sched.h /usr/include/sys/sched.h \
+ /usr/include/guile/1.8/libguile/boolean.h \
+ /usr/include/guile/1.8/libguile/chars.h \
+ /usr/include/guile/1.8/libguile/continuations.h \
+ /usr/include/guile/1.8/libguile/dynl.h \
+ /usr/include/guile/1.8/libguile/dynwind.h \
+ /usr/include/guile/1.8/libguile/eq.h \
+ /usr/include/guile/1.8/libguile/error.h \
+ /usr/include/guile/1.8/libguile/eval.h \
+ /usr/include/guile/1.8/libguile/struct.h \
+ /usr/include/guile/1.8/libguile/print.h \
+ /usr/include/guile/1.8/libguile/evalext.h \
+ /usr/include/guile/1.8/libguile/extensions.h \
+ /usr/include/guile/1.8/libguile/feature.h \
+ /usr/include/guile/1.8/libguile/filesys.h \
+ /usr/include/guile/1.8/libguile/fluids.h \
+ /usr/include/guile/1.8/libguile/vectors.h \
+ /usr/include/guile/1.8/libguile/unif.h \
+ /usr/include/guile/1.8/libguile/fports.h \
+ /usr/include/guile/1.8/libguile/ports.h \
+ /usr/include/guile/1.8/libguile/futures.h \
+ /usr/include/guile/1.8/libguile/gc.h \
+ /usr/include/guile/1.8/libguile/hooks.h \
+ /usr/include/guile/1.8/libguile/gdbint.h \
+ /usr/include/guile/1.8/libguile/goops.h \
+ /usr/include/guile/1.8/libguile/validate.h \
+ /usr/include/guile/1.8/libguile/gsubr.h \
+ /usr/include/guile/1.8/libguile/guardians.h \
+ /usr/include/guile/1.8/libguile/hash.h \
+ /usr/include/guile/1.8/libguile/hashtab.h \
+ /usr/include/guile/1.8/libguile/weaks.h \
+ /usr/include/guile/1.8/libguile/init.h \
+ /usr/include/guile/1.8/libguile/ioext.h \
+ /usr/include/guile/1.8/libguile/rdelim.h \
+ /usr/include/guile/1.8/libguile/rw.h \
+ /usr/include/guile/1.8/libguile/keywords.h \
+ /usr/include/guile/1.8/libguile/list.h \
+ /usr/include/guile/1.8/libguile/load.h \
+ /usr/include/guile/1.8/libguile/macros.h \
+ /usr/include/guile/1.8/libguile/mallocs.h \
+ /usr/include/guile/1.8/libguile/modules.h \
+ /usr/include/guile/1.8/libguile/net_db.h \
+ /usr/include/guile/1.8/libguile/numbers.h /usr/include/ieeefp.h \
+ /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/float.h \
+ /usr/include/guile/1.8/libguile/objects.h \
+ /usr/include/guile/1.8/libguile/objprop.h \
+ /usr/include/guile/1.8/libguile/options.h \
+ /usr/include/guile/1.8/libguile/pairs.h \
+ /usr/include/guile/1.8/libguile/ports.h \
+ /usr/include/guile/1.8/libguile/posix.h \
+ /usr/include/guile/1.8/libguile/print.h \
+ /usr/include/guile/1.8/libguile/procprop.h \
+ /usr/include/guile/1.8/libguile/properties.h \
+ /usr/include/guile/1.8/libguile/procs.h \
+ /usr/include/guile/1.8/libguile/ramap.h \
+ /usr/include/guile/1.8/libguile/random.h \
+ /usr/include/guile/1.8/libguile/read.h \
+ /usr/include/guile/1.8/libguile/root.h \
+ /usr/include/guile/1.8/libguile/scmsigs.h \
+ /usr/include/guile/1.8/libguile/script.h \
+ /usr/include/guile/1.8/libguile/simpos.h \
+ /usr/include/guile/1.8/libguile/smob.h \
+ /usr/include/guile/1.8/libguile/snarf.h \
+ /usr/include/guile/1.8/libguile/socket.h \
+ /usr/include/guile/1.8/libguile/sort.h \
+ /usr/include/guile/1.8/libguile/srcprop.h \
+ /usr/include/guile/1.8/libguile/stackchk.h \
+ /usr/include/guile/1.8/libguile/stime.h \
+ /usr/include/guile/1.8/libguile/strings.h \
+ /usr/include/guile/1.8/libguile/srfi-13.h \
+ /usr/include/guile/1.8/libguile/srfi-14.h \
+ /usr/include/guile/1.8/libguile/strorder.h \
+ /usr/include/guile/1.8/libguile/strports.h \
+ /usr/include/guile/1.8/libguile/struct.h \
+ /usr/include/guile/1.8/libguile/symbols.h \
+ /usr/include/guile/1.8/libguile/tags.h \
+ /usr/include/guile/1.8/libguile/throw.h \
+ /usr/include/guile/1.8/libguile/unif.h \
+ /usr/include/guile/1.8/libguile/validate.h \
+ /usr/include/guile/1.8/libguile/values.h \
+ /usr/include/guile/1.8/libguile/variable.h \
+ /usr/include/guile/1.8/libguile/smob.h \
+ /usr/include/guile/1.8/libguile/vectors.h \
+ /usr/include/guile/1.8/libguile/srfi-4.h \
+ /usr/include/guile/1.8/libguile/version.h \
+ /usr/include/guile/1.8/libguile/vports.h \
+ /usr/include/guile/1.8/libguile/weaks.h \
+ /usr/include/guile/1.8/libguile/backtrace.h \
+ /usr/include/guile/1.8/libguile/debug.h \
+ /usr/include/guile/1.8/libguile/stacks.h \
+ /usr/include/guile/1.8/libguile/threads.h \
+ /usr/include/guile/1.8/libguile/inline.h \
+ /usr/include/guile/1.8/libguile/pairs.h \
+ /usr/include/guile/1.8/libguile/gc.h \
+ /usr/include/guile/1.8/libguile/error.h \
+ /usr/include/guile/1.8/libguile/discouraged.h \
+ /usr/include/guile/1.8/libguile/deprecated.h \
+ /usr/include/guile/1.8/libguile/strings.h gmk-default.h
+
+makeint.h:
+
+config.h:
+
+/usr/include/alloca.h:
+
+/usr/include/_ansi.h:
+
+/usr/include/newlib.h:
+
+/usr/include/sys/config.h:
+
+/usr/include/machine/ieeefp.h:
+
+/usr/include/sys/features.h:
+
+/usr/include/cygwin/config.h:
+
+/usr/include/sys/reent.h:
+
+/usr/include/_ansi.h:
+
+/usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stddef.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/machine/_default_types.h:
+
+/usr/include/sys/lock.h:
+
+gnumake.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/_stdint.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/cygwin/types.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/byteswap.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/sys/_timespec.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/time.h:
+
+/usr/include/sys/timespec.h:
+
+/usr/include/cygwin/time.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/cygwin/signal.h:
+
+/usr/include/sys/ucontext.h:
+
+/usr/include/cygwin/stat.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stdarg.h:
+
+/usr/include/sys/stdio.h:
+
+/usr/include/ctype.h:
+
+/usr/include/sys/timeb.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/sys/_timeval.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/errno.h:
+
+/usr/include/sys/errno.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+getopt.h:
+
+/usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/limits.h:
+
+/usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/param.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/stdlib.h:
+
+/usr/include/cygwin/stdlib.h:
+
+/usr/include/cygwin/wait.h:
+
+/usr/include/string.h:
+
+/usr/include/sys/string.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/sys/_intsup.h:
+
+/usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/locale.h:
+
+gettext.h:
+
+/usr/include/libintl.h:
+
+/usr/include/sys/resource.h:
+
+debug.h:
+
+filedef.h:
+
+hash.h:
+
+dep.h:
+
+variable.h:
+
+/usr/include/guile/1.8/libguile.h:
+
+/usr/include/gmp.h:
+
+/usr/include/guile/1.8/libguile/__scm.h:
+
+/usr/include/guile/1.8/libguile/scmconfig.h:
+
+/usr/include/guile/1.8/libguile/tags.h:
+
+/usr/include/guile/1.8/libguile/__scm.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/machine/setjmp.h:
+
+/usr/include/guile/1.8/libguile/alist.h:
+
+/usr/include/guile/1.8/libguile/arbiters.h:
+
+/usr/include/guile/1.8/libguile/async.h:
+
+/usr/include/guile/1.8/libguile/root.h:
+
+/usr/include/guile/1.8/libguile/debug.h:
+
+/usr/include/guile/1.8/libguile/options.h:
+
+/usr/include/guile/1.8/libguile/throw.h:
+
+/usr/include/guile/1.8/libguile/threads.h:
+
+/usr/include/guile/1.8/libguile/procs.h:
+
+/usr/include/guile/1.8/libguile/iselect.h:
+
+/usr/include/guile/1.8/libguile/dynwind.h:
+
+/usr/include/guile/1.8/libguile/continuations.h:
+
+/usr/include/guile/1.8/libguile/pthread-threads.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/sys/sched.h:
+
+/usr/include/guile/1.8/libguile/boolean.h:
+
+/usr/include/guile/1.8/libguile/chars.h:
+
+/usr/include/guile/1.8/libguile/continuations.h:
+
+/usr/include/guile/1.8/libguile/dynl.h:
+
+/usr/include/guile/1.8/libguile/dynwind.h:
+
+/usr/include/guile/1.8/libguile/eq.h:
+
+/usr/include/guile/1.8/libguile/error.h:
+
+/usr/include/guile/1.8/libguile/eval.h:
+
+/usr/include/guile/1.8/libguile/struct.h:
+
+/usr/include/guile/1.8/libguile/print.h:
+
+/usr/include/guile/1.8/libguile/evalext.h:
+
+/usr/include/guile/1.8/libguile/extensions.h:
+
+/usr/include/guile/1.8/libguile/feature.h:
+
+/usr/include/guile/1.8/libguile/filesys.h:
+
+/usr/include/guile/1.8/libguile/fluids.h:
+
+/usr/include/guile/1.8/libguile/vectors.h:
+
+/usr/include/guile/1.8/libguile/unif.h:
+
+/usr/include/guile/1.8/libguile/fports.h:
+
+/usr/include/guile/1.8/libguile/ports.h:
+
+/usr/include/guile/1.8/libguile/futures.h:
+
+/usr/include/guile/1.8/libguile/gc.h:
+
+/usr/include/guile/1.8/libguile/hooks.h:
+
+/usr/include/guile/1.8/libguile/gdbint.h:
+
+/usr/include/guile/1.8/libguile/goops.h:
+
+/usr/include/guile/1.8/libguile/validate.h:
+
+/usr/include/guile/1.8/libguile/gsubr.h:
+
+/usr/include/guile/1.8/libguile/guardians.h:
+
+/usr/include/guile/1.8/libguile/hash.h:
+
+/usr/include/guile/1.8/libguile/hashtab.h:
+
+/usr/include/guile/1.8/libguile/weaks.h:
+
+/usr/include/guile/1.8/libguile/init.h:
+
+/usr/include/guile/1.8/libguile/ioext.h:
+
+/usr/include/guile/1.8/libguile/rdelim.h:
+
+/usr/include/guile/1.8/libguile/rw.h:
+
+/usr/include/guile/1.8/libguile/keywords.h:
+
+/usr/include/guile/1.8/libguile/list.h:
+
+/usr/include/guile/1.8/libguile/load.h:
+
+/usr/include/guile/1.8/libguile/macros.h:
+
+/usr/include/guile/1.8/libguile/mallocs.h:
+
+/usr/include/guile/1.8/libguile/modules.h:
+
+/usr/include/guile/1.8/libguile/net_db.h:
+
+/usr/include/guile/1.8/libguile/numbers.h:
+
+/usr/include/ieeefp.h:
+
+/usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/float.h:
+
+/usr/include/guile/1.8/libguile/objects.h:
+
+/usr/include/guile/1.8/libguile/objprop.h:
+
+/usr/include/guile/1.8/libguile/options.h:
+
+/usr/include/guile/1.8/libguile/pairs.h:
+
+/usr/include/guile/1.8/libguile/ports.h:
+
+/usr/include/guile/1.8/libguile/posix.h:
+
+/usr/include/guile/1.8/libguile/print.h:
+
+/usr/include/guile/1.8/libguile/procprop.h:
+
+/usr/include/guile/1.8/libguile/properties.h:
+
+/usr/include/guile/1.8/libguile/procs.h:
+
+/usr/include/guile/1.8/libguile/ramap.h:
+
+/usr/include/guile/1.8/libguile/random.h:
+
+/usr/include/guile/1.8/libguile/read.h:
+
+/usr/include/guile/1.8/libguile/root.h:
+
+/usr/include/guile/1.8/libguile/scmsigs.h:
+
+/usr/include/guile/1.8/libguile/script.h:
+
+/usr/include/guile/1.8/libguile/simpos.h:
+
+/usr/include/guile/1.8/libguile/smob.h:
+
+/usr/include/guile/1.8/libguile/snarf.h:
+
+/usr/include/guile/1.8/libguile/socket.h:
+
+/usr/include/guile/1.8/libguile/sort.h:
+
+/usr/include/guile/1.8/libguile/srcprop.h:
+
+/usr/include/guile/1.8/libguile/stackchk.h:
+
+/usr/include/guile/1.8/libguile/stime.h:
+
+/usr/include/guile/1.8/libguile/strings.h:
+
+/usr/include/guile/1.8/libguile/srfi-13.h:
+
+/usr/include/guile/1.8/libguile/srfi-14.h:
+
+/usr/include/guile/1.8/libguile/strorder.h:
+
+/usr/include/guile/1.8/libguile/strports.h:
+
+/usr/include/guile/1.8/libguile/struct.h:
+
+/usr/include/guile/1.8/libguile/symbols.h:
+
+/usr/include/guile/1.8/libguile/tags.h:
+
+/usr/include/guile/1.8/libguile/throw.h:
+
+/usr/include/guile/1.8/libguile/unif.h:
+
+/usr/include/guile/1.8/libguile/validate.h:
+
+/usr/include/guile/1.8/libguile/values.h:
+
+/usr/include/guile/1.8/libguile/variable.h:
+
+/usr/include/guile/1.8/libguile/smob.h:
+
+/usr/include/guile/1.8/libguile/vectors.h:
+
+/usr/include/guile/1.8/libguile/srfi-4.h:
+
+/usr/include/guile/1.8/libguile/version.h:
+
+/usr/include/guile/1.8/libguile/vports.h:
+
+/usr/include/guile/1.8/libguile/weaks.h:
+
+/usr/include/guile/1.8/libguile/backtrace.h:
+
+/usr/include/guile/1.8/libguile/debug.h:
+
+/usr/include/guile/1.8/libguile/stacks.h:
+
+/usr/include/guile/1.8/libguile/threads.h:
+
+/usr/include/guile/1.8/libguile/inline.h:
+
+/usr/include/guile/1.8/libguile/pairs.h:
+
+/usr/include/guile/1.8/libguile/gc.h:
+
+/usr/include/guile/1.8/libguile/error.h:
+
+/usr/include/guile/1.8/libguile/discouraged.h:
+
+/usr/include/guile/1.8/libguile/deprecated.h:
+
+/usr/include/guile/1.8/libguile/strings.h:
+
+gmk-default.h:

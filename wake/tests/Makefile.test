@@ -1,0 +1,14 @@
+# <<
+
+heredoc = <<ZZEND
+	heredoc_line_1
+	heredoc_line_2
+ZZEND
+
+
+here : <<XXEND
+	#!/usr/bin/php
+	echo date ( 'Y-m-d' ) ;
+	echo $$MAKEFILE ;
+XXEND
+

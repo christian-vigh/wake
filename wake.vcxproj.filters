@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="alloca.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="amiga.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arscan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commands.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="default.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="expand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="function.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getloadavg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="getopt1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="guile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="implicit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="job.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="load.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loadapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="output.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="remake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="remote-cstms.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="remote-stub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rule.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="signame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strcache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="variable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vmsfunctions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vmsify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vmsjobs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glob\fnmatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glob\glob.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w32\pathstuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w32\compat\dirent.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w32\compat\posixfcn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w32\subproc\misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w32\subproc\sub_proc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="w32\subproc\w32err.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\wake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\wake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\utilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-internals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-math.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-message.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-date.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\builtins\builtins-file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\maker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\eval.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\conditionals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\record.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\define.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake\lib\stringbuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="amiga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gettext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gmk-default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gnumake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="job.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="makeint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="output.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="variable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vmsdir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glob\fnmatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glob\glob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="w32\include\dirent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="w32\include\dlfcn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="w32\include\pathstuff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="w32\include\sub_proc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="w32\include\w32err.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="w32\subproc\proc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake\wake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake\include\wake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake\include\builtins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake\include\counter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake\lib\builtins\builtins-logical.c">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake\include\parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="waketests\kb" />
+    <None Include="waketests\wake.exe.stackdump" />
+    <None Include="waketests\log.txt" />
+    <None Include="waketests\Makefile" />
+    <None Include="ABOUT-NLS" />
+    <None Include="aclocal.m4" />
+    <None Include="acinclude.m4" />
+    <None Include="build.sh" />
+    <None Include="build_w32.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build.sh.in" />
+    <None Include="config.ami" />
+    <None Include="config.h-vms" />
+    <None Include="COPYING" />
+    <None Include="config.h.in" />
+    <None Include="config.h.W32" />
+    <None Include="config.log" />
+    <None Include="config.status" />
+    <None Include="configh.dos" />
+    <None Include="configure" />
+    <None Include="configure.ac" />
+    <None Include="configure.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="dosbuild.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gmk-default.scm" />
+    <None Include="INSTALL" />
+    <None Include="make.1" />
+    <None Include="makefile.vms" />
+    <None Include="make.lnk" />
+    <None Include="make_msvc_net2003.vcproj" />
+    <None Include="Makefile" />
+    <None Include="Makefile.am" />
+    <None Include="Makefile.ami" />
+    <None Include="makefile.com" />
+    <None Include="Makefile.DOS" />
+    <None Include="Makefile.in" />
+    <None Include="NEWS" />
+    <None Include="out" />
+    <None Include="NMakefile" />
+    <None Include="README" />
+    <None Include="README.W32" />
+    <None Include="README.Amiga" />
+    <None Include="README.customs" />
+    <None Include="README.DOS" />
+    <None Include="README.OS2" />
+    <None Include="README.VMS" />
+    <None Include="SCOPTIONS" />
+    <None Include="SMakefile" />
+    <None Include="stamp-h1" />
+    <None Include="subproc.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="wake\wake.files" />
+    <None Include="wake\tests\Makefile" />
+    <None Include="AUTHORS" />
+    <None Include="wake\tests\Makefile.test" />
+  </ItemGroup>
+</Project>

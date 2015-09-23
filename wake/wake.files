@@ -1,0 +1,13 @@
+# List of modified files
+main.c
+function.c
+variable.c
+variable.h
+filedef.h
+Makefile.am
+read.c
+commands.h
+
+# List of new files
+function.h
+wake/
