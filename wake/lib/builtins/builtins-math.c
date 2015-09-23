@@ -19,6 +19,7 @@
 # else
 
 # include	"wake.h"
+# include	"eval.h"
 # include	<math.h>
 
 
@@ -273,23 +274,21 @@ WAKE_BUILTIN ( wake_builtin_math_not )
 # define	OP_MUL			4
 
 
-static double  math_eval ( char * expression ) 
-   {
-    }
-
-
 WAKE_BUILTIN ( wake_builtin_math_eval )
    {
 	char		buffer [64] ;
 	double		value ;
-	int		result ;
 	int		length ;
 
 
-	value		=  math_eval ( argv [0] ) ;
-	length		=  sprintf ( buffer, "%g", result ) ;
+	if  ( evaluate ( argv [0], & value ) )
+	   {
+		length		=  sprintf ( buffer, "%g", value ) ;
 
-	output		=  variable_buffer_output ( output, buffer, length ) ;
+		output		=  variable_buffer_output ( output, buffer, length ) ;
+	    }
+	else 
+		fatal ( reading_file, 0, evaluator_error ) ;
 
 	return ( output ) ;
     }

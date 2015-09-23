@@ -3055,7 +3055,7 @@ quote_for_env (char *out, const char *in)
       else if (isblank ((unsigned char)*in) || *in == '\\')
         *out++ = '\\';
       *out++ = *in++;
-    }
+    } 
 
   return out;
 }

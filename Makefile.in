@@ -146,7 +146,7 @@ am__wake_SOURCES_DIST = ar.c arscan.c commands.c default.c dir.c \
 	remake.c rule.c signame.c strcache.c variable.c version.c \
 	vpath.c hash.c $(WAKELIBDIR)/wake.c \
 	$(WAKELIBDIR)/conditionals.c $(WAKELIBDIR)/define.c \
-	$(WAKELIBDIR)/eval.c $(WAKELIBDIR)/maker.c \
+	$(WAKELIBDIR)/parser.c $(WAKELIBDIR)/maker.c \
 	$(WAKELIBDIR)/reader.c $(WAKELIBDIR)/record.c \
 	$(WAKELIBDIR)/stringbuffer.c $(WAKELIBDIR)/utilities.c \
 	$(WAKELIBDIR)/builtins/builtins-date.c \
@@ -157,16 +157,16 @@ am__wake_SOURCES_DIST = ar.c arscan.c commands.c default.c dir.c \
 	$(WAKELIBDIR)/builtins/builtins-math.c \
 	$(WAKELIBDIR)/builtins/builtins-message.c \
 	$(WAKELIBDIR)/builtins/builtins-misc.c \
-	$(WAKELIBDIR)/builtins/builtins-string.c remote-stub.c \
-	remote-cstms.c
+	$(WAKELIBDIR)/builtins/builtins-string.c \
+	$(WAKEDIR)/eval/eval.c remote-stub.c remote-cstms.c
 am__objects_1 = wake.$(OBJEXT) conditionals.$(OBJEXT) define.$(OBJEXT) \
-	eval.$(OBJEXT) maker.$(OBJEXT) reader.$(OBJEXT) \
+	parser.$(OBJEXT) maker.$(OBJEXT) reader.$(OBJEXT) \
 	record.$(OBJEXT) stringbuffer.$(OBJEXT) utilities.$(OBJEXT) \
 	builtins-date.$(OBJEXT) builtins-file.$(OBJEXT) \
 	builtins-internals.$(OBJEXT) builtins-list.$(OBJEXT) \
 	builtins-logical.$(OBJEXT) builtins-math.$(OBJEXT) \
 	builtins-message.$(OBJEXT) builtins-misc.$(OBJEXT) \
-	builtins-string.$(OBJEXT)
+	builtins-string.$(OBJEXT) eval.$(OBJEXT)
 @USE_CUSTOMS_FALSE@am__objects_2 = remote-stub.$(OBJEXT)
 @USE_CUSTOMS_TRUE@am__objects_2 = remote-cstms.$(OBJEXT)
 am_wake_OBJECTS = ar.$(OBJEXT) arscan.$(OBJEXT) commands.$(OBJEXT) \
@@ -469,13 +469,13 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 WAKEDEFINITIONS = -DWAKE_EXTENSIONS -DEXPERIMENTAL -DHAVE_DOS_PATHS
 WAKEDIR = wake
-WAKEINCLUDEDIR = $(WAKEDIR)/include
+WAKEINCLUDEDIRS = -I$(WAKEDIR)/include -I$(WAKEDIR)/eval
 WAKELIBDIR = $(WAKEDIR)/lib
 WAKESOURCES = \
 			   $(WAKELIBDIR)/wake.c					\
 			   $(WAKELIBDIR)/conditionals.c				\
 			   $(WAKELIBDIR)/define.c				\
-			   $(WAKELIBDIR)/eval.c					\
+			   $(WAKELIBDIR)/parser.c				\
 			   $(WAKELIBDIR)/maker.c				\
 			   $(WAKELIBDIR)/reader.c				\
 			   $(WAKELIBDIR)/record.c				\
@@ -489,15 +489,17 @@ WAKESOURCES = \
 			   $(WAKELIBDIR)/builtins/builtins-math.c		\
 			   $(WAKELIBDIR)/builtins/builtins-message.c		\
 			   $(WAKELIBDIR)/builtins/builtins-misc.c		\
-			   $(WAKELIBDIR)/builtins/builtins-string.c
+			   $(WAKELIBDIR)/builtins/builtins-string.c		\
+			   $(WAKEDIR)/eval/eval.c
 
 WAKEINCLUDES = \
-			   $(WAKEINCLUDEDIR)/wake.h				\
-			   $(WAKEINCLUDEDIR)/builtins.h				\
-			   $(WAKEINCLUDEDIR)/counter.h				\
-			   $(WAKEINCLUDEDIR)/parse.h
+			   $(WAKEDIR)/include/wake.h				\
+			   $(WAKEDIR)/include/builtins.h			\
+			   $(WAKEDIR)/include/counter.h				\
+			   $(WAKEDIR)/include/parse.h				\
+			   $(WAKEDIR)/eval/evalfuncs.h
 
-WAKELIBS = -luuid
+WAKELIBS = -luuid -lm
 
 # end of definitions for Wake
 AUTOMAKE_OPTIONS = 1.8 dist-bzip2 check-news
@@ -526,7 +528,7 @@ noinst_HEADERS = commands.h dep.h filedef.h job.h makeint.h rule.h variable.h \
 wake_LDADD = @LIBOBJS@ @ALLOCA@ $(GLOBLIB) @GETLOADAVG_LIBS@ @LIBINTL@ \
 	$(GUILE_LIBS) $(WAKELIBS) $(am__append_1)
 man_MANS = make.1
-AM_CPPFLAGS = $(GLOBINC) -I$(WAKEINCLUDEDIR) $(am__append_2)
+AM_CPPFLAGS = $(GLOBINC) $(WAKEINCLUDEDIRS) $(am__append_2)
 AM_CFLAGS = $(GUILE_CFLAGS) -Wall
 
 # Extra stuff to include in the distribution.
@@ -722,6 +724,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/maker.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/misc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/output.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/parser.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/reader.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/record.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/remake.Po@am__quote@
@@ -808,19 +811,19 @@ define.obj: $(WAKELIBDIR)/define.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o define.obj `if test -f '$(WAKELIBDIR)/define.c'; then $(CYGPATH_W) '$(WAKELIBDIR)/define.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKELIBDIR)/define.c'; fi`
 
-eval.o: $(WAKELIBDIR)/eval.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT eval.o -MD -MP -MF $(DEPDIR)/eval.Tpo -c -o eval.o `test -f '$(WAKELIBDIR)/eval.c' || echo '$(srcdir)/'`$(WAKELIBDIR)/eval.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/eval.Tpo $(DEPDIR)/eval.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKELIBDIR)/eval.c' object='eval.o' libtool=no @AMDEPBACKSLASH@
+parser.o: $(WAKELIBDIR)/parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT parser.o -MD -MP -MF $(DEPDIR)/parser.Tpo -c -o parser.o `test -f '$(WAKELIBDIR)/parser.c' || echo '$(srcdir)/'`$(WAKELIBDIR)/parser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/parser.Tpo $(DEPDIR)/parser.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKELIBDIR)/parser.c' object='parser.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o eval.o `test -f '$(WAKELIBDIR)/eval.c' || echo '$(srcdir)/'`$(WAKELIBDIR)/eval.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o parser.o `test -f '$(WAKELIBDIR)/parser.c' || echo '$(srcdir)/'`$(WAKELIBDIR)/parser.c
 
-eval.obj: $(WAKELIBDIR)/eval.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT eval.obj -MD -MP -MF $(DEPDIR)/eval.Tpo -c -o eval.obj `if test -f '$(WAKELIBDIR)/eval.c'; then $(CYGPATH_W) '$(WAKELIBDIR)/eval.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKELIBDIR)/eval.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/eval.Tpo $(DEPDIR)/eval.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKELIBDIR)/eval.c' object='eval.obj' libtool=no @AMDEPBACKSLASH@
+parser.obj: $(WAKELIBDIR)/parser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT parser.obj -MD -MP -MF $(DEPDIR)/parser.Tpo -c -o parser.obj `if test -f '$(WAKELIBDIR)/parser.c'; then $(CYGPATH_W) '$(WAKELIBDIR)/parser.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKELIBDIR)/parser.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/parser.Tpo $(DEPDIR)/parser.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKELIBDIR)/parser.c' object='parser.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o eval.obj `if test -f '$(WAKELIBDIR)/eval.c'; then $(CYGPATH_W) '$(WAKELIBDIR)/eval.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKELIBDIR)/eval.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o parser.obj `if test -f '$(WAKELIBDIR)/parser.c'; then $(CYGPATH_W) '$(WAKELIBDIR)/parser.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKELIBDIR)/parser.c'; fi`
 
 maker.o: $(WAKELIBDIR)/maker.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT maker.o -MD -MP -MF $(DEPDIR)/maker.Tpo -c -o maker.o `test -f '$(WAKELIBDIR)/maker.c' || echo '$(srcdir)/'`$(WAKELIBDIR)/maker.c
@@ -1017,6 +1020,20 @@ builtins-string.obj: $(WAKELIBDIR)/builtins/builtins-string.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKELIBDIR)/builtins/builtins-string.c' object='builtins-string.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o builtins-string.obj `if test -f '$(WAKELIBDIR)/builtins/builtins-string.c'; then $(CYGPATH_W) '$(WAKELIBDIR)/builtins/builtins-string.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKELIBDIR)/builtins/builtins-string.c'; fi`
+
+eval.o: $(WAKEDIR)/eval/eval.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT eval.o -MD -MP -MF $(DEPDIR)/eval.Tpo -c -o eval.o `test -f '$(WAKEDIR)/eval/eval.c' || echo '$(srcdir)/'`$(WAKEDIR)/eval/eval.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/eval.Tpo $(DEPDIR)/eval.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKEDIR)/eval/eval.c' object='eval.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o eval.o `test -f '$(WAKEDIR)/eval/eval.c' || echo '$(srcdir)/'`$(WAKEDIR)/eval/eval.c
+
+eval.obj: $(WAKEDIR)/eval/eval.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT eval.obj -MD -MP -MF $(DEPDIR)/eval.Tpo -c -o eval.obj `if test -f '$(WAKEDIR)/eval/eval.c'; then $(CYGPATH_W) '$(WAKEDIR)/eval/eval.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKEDIR)/eval/eval.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/eval.Tpo $(DEPDIR)/eval.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$(WAKEDIR)/eval/eval.c' object='eval.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o eval.obj `if test -f '$(WAKEDIR)/eval/eval.c'; then $(CYGPATH_W) '$(WAKEDIR)/eval/eval.c'; else $(CYGPATH_W) '$(srcdir)/$(WAKEDIR)/eval/eval.c'; fi`
 install-man1: $(man_MANS)
 	@$(NORMAL_INSTALL)
 	@list1=''; \

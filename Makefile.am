@@ -21,14 +21,14 @@
 WAKEDEFINITIONS		=  -DWAKE_EXTENSIONS -DEXPERIMENTAL -DHAVE_DOS_PATHS
 
 WAKEDIR			=  wake
-WAKEINCLUDEDIR		=  $(WAKEDIR)/include
+WAKEINCLUDEDIRS		=  -I$(WAKEDIR)/include -I$(WAKEDIR)/eval
 WAKELIBDIR		=  $(WAKEDIR)/lib
 
 WAKESOURCES		=  \
 			   $(WAKELIBDIR)/wake.c					\
 			   $(WAKELIBDIR)/conditionals.c				\
 			   $(WAKELIBDIR)/define.c				\
-			   $(WAKELIBDIR)/eval.c					\
+			   $(WAKELIBDIR)/parser.c				\
 			   $(WAKELIBDIR)/maker.c				\
 			   $(WAKELIBDIR)/reader.c				\
 			   $(WAKELIBDIR)/record.c				\
@@ -42,14 +42,16 @@ WAKESOURCES		=  \
 			   $(WAKELIBDIR)/builtins/builtins-math.c		\
 			   $(WAKELIBDIR)/builtins/builtins-message.c		\
 			   $(WAKELIBDIR)/builtins/builtins-misc.c		\
-			   $(WAKELIBDIR)/builtins/builtins-string.c
+			   $(WAKELIBDIR)/builtins/builtins-string.c		\
+			   $(WAKEDIR)/eval/eval.c
 
 WAKEINCLUDES		=  \
-			   $(WAKEINCLUDEDIR)/wake.h				\
-			   $(WAKEINCLUDEDIR)/builtins.h				\
-			   $(WAKEINCLUDEDIR)/counter.h				\
-			   $(WAKEINCLUDEDIR)/parse.h
-WAKELIBS		=  -luuid
+			   $(WAKEDIR)/include/wake.h				\
+			   $(WAKEDIR)/include/builtins.h			\
+			   $(WAKEDIR)/include/counter.h				\
+			   $(WAKEDIR)/include/parse.h				\
+			   $(WAKEDIR)/eval/evalfuncs.h
+WAKELIBS		=  -luuid -lm
 
 # end of definitions for Wake
 
@@ -100,7 +102,7 @@ man_MANS =	make.1
 
 DEFS =		-DLOCALEDIR=\"$(localedir)\" -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\" $(WAKEDEFINITIONS) @DEFS@
 
-AM_CPPFLAGS =	$(GLOBINC) -I$(WAKEINCLUDEDIR)
+AM_CPPFLAGS =	$(GLOBINC) $(WAKEINCLUDEDIRS)
 AM_CFLAGS =	$(GUILE_CFLAGS) -Wall
 
 # Only process if target is MS-Windows

@@ -33,7 +33,8 @@ builtins-math.o: wake/lib/builtins/builtins-math.c wake/include/wake.h \
  /usr/lib/gcc/x86_64-pc-cygwin/4.9.3/include/stdint.h \
  /usr/include/stdint.h /usr/include/locale.h gettext.h \
  /usr/include/libintl.h /usr/include/sys/resource.h filedef.h hash.h \
- function.h variable.h wake/include/wake.h /usr/include/math.h
+ function.h variable.h wake/include/wake.h wake/eval/eval.h \
+ /usr/include/strings.h /usr/include/math.h
 
 wake/include/wake.h:
 
@@ -186,5 +187,9 @@ function.h:
 variable.h:
 
 wake/include/wake.h:
+
+wake/eval/eval.h:
+
+/usr/include/strings.h:
 
 /usr/include/math.h:
