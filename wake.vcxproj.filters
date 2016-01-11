@@ -207,6 +207,66 @@
     <ClCompile Include="wake\eval\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="wake.ext\eval\eval.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\eval\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-date.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-internals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-logical.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-math.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-message.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\builtins\builtins-misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\conditionals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\wake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\define.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\maker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\parser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\record.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\stringbuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wake.ext\lib\utilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="amiga.h">
@@ -308,6 +368,24 @@
     <ClInclude Include="wake\eval\eval.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="wake.ext\eval\eval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake.ext\eval\evalfuncs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake.ext\include\builtins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake.ext\include\wake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake.ext\include\counter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wake.ext\include\parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="waketests\kb" />
@@ -372,5 +450,10 @@
     <None Include="wake\tests\Makefile.test" />
     <None Include="wake\eval\README.md" />
     <None Include="wake\eval\.gitignore" />
+    <None Include="wake.ext\eval\.gitignore" />
+    <None Include="wake.ext\eval\README.md" />
+    <None Include="wake.ext\tests\Makefile" />
+    <None Include="wake.ext\tests\Makefile.test" />
+    <None Include="wake.ext\wake.files" />
   </ItemGroup>
 </Project>
